@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { ShootingStars } from '../ShootingStar/ShootingStar';
+import { StarsBackground } from '../StarsBackground/StarsBackground';
 
 export default function HomeHero() {
   const sectionRef = useRef(null);
@@ -55,29 +57,17 @@ export default function HomeHero() {
       
       {/* Background Image with Parallax */}
       <div
-        className="absolute inset-0 bg-cover bg-top"
+        className="absolute inset-0 bg-cover bg-top z-10"
         style={{
-          backgroundImage: 'url(/images/main.webp)',
+          backgroundImage: 'url(/images/main3.jpg)',
           transform: `translateY(${backgroundTranslateY}px)`,
           transition: 'transform 0.1s ease-out',
+          mixBlendMode:"screen"
         }}
       />
-      {/* Gradient Overlay for better text visibility */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/20" />
-      
-      {/* <div className='absolute bottom-0 left-0 md:h-[24vh] w-full bg-black z-[11]'></div> */}
-      {/* Audience image with parallax effect - positioned relative to viewport */}
-      <div
-        className="absolute bottom-[-20%] left-0 z-10 h-full w-full hidden md:block floating"
-        style={{
-          transform: `translateY(${audienceTranslateY}px)`,
-          backgroundImage: 'url(/images/bg1.png)',
-          backgroundPosition: 'bottom center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '100% auto', // Full width, auto height to maintain aspect ratio
-          transition: 'transform 0.1s ease-out',
-        }}
-      />
+
+      <ShootingStars />
+      <StarsBackground />
     </section>
   );
 }

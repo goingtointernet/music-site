@@ -7,14 +7,14 @@ import PatnersLogo from "@/components/PatnersLogo/PatnersLogo";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full h-full overflow-x-hidden">
+    <div className="flex flex-col w-full h-full overflow-x-hidden bg-black">
       <Navbar/>
       <HomeHero/>
       <marquee className="marquee-ele" behavior="alternate">FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music
       </marquee> 
       <ModelAboutSection/>
-      <PatnersLogo/>    
       <AlbumsCard/>
+      <PatnersLogo/>    
       <Footer/>
     </div>
   );

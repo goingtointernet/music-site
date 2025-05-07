@@ -56,7 +56,7 @@ export default function AlbumsCard() {
   ];
 
   return (
-    <div className="bg-gradient-to-t from-black to-[#111111] flex flex-col justify-center items-center min-h-screen text-white py-8 px-4 pb-[100px]">
+    <div className="bg-gradient-to-t from-black to-[#111111] flex flex-col justify-center items-center min-h-screen text-white py-4 px-4 pb-[0px]">
 
     <span className='text-textColor opacity-50 uppercase' style={{letterSpacing:"10px"}}>Listen My</span>
     <h2 className='mb-[40px] text-[28px] md:text-[40px] font-[500] uppercase' style={{letterSpacing:"40px"}}>Albums</h2>

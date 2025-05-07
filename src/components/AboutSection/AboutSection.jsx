@@ -1,5 +1,7 @@
 "use client"
 import { useState, useEffect, useRef } from 'react';
+import { ShootingStars } from '../ShootingStar/ShootingStar';
+import { StarsBackground } from '../StarsBackground/StarsBackground';
 
 export default function ModelAboutSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -67,13 +69,15 @@ export default function ModelAboutSection() {
             <div className="absolute -top-6 -left-6 w-64 h-64 bg-gray-500 rounded-full opacity-20 animate-pulse" />
             <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-gray-500 rounded-full opacity-20 animate-pulse" />
             
-            <div className="relative aspect-square overflow-hidden rounded-xl shadow-2xl transform hover:scale-105 transition duration-700">
+            <div className="relative aspect-square bg-black overflow-hidden rounded-xl shadow-2xl transform hover:scale-105 transition duration-700">
               <img 
-                src="/images/main.webp" 
+                src="/images/main2.jpg" 
                 alt="Model Portrait" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover z-10"
+                style={{mixBlendMode:"screen"}}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <ShootingStars />
+              <StarsBackground />
             </div>
           </div>
           
@@ -84,27 +88,27 @@ export default function ModelAboutSection() {
             </h2>
             
             <h3 className={`text-4xl md:text-5xl font-bold mb-6 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} transition-all duration-700 delay-500`}>
-              Creating Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Experiences</span>
+            Creating  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Musical Journeys</span>
             </h3>
             
             <div className={`prose prose-lg prose-invert max-w-none mb-10 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} transition-all duration-700 delay-700`}>
               <p>
-                With over 10 years of experience in the creative industry, I specialize in crafting immersive digital experiences that bridge the gap between art and technology. My approach combines cutting-edge techniques with timeless design principles.
+              ith over a decade of dedication to music, I craft sounds that tell stories, evoke emotion, and connect with audiences on a deep level. From writing lyrics to producing beats, every note is a reflection of my journey and artistic vision.
               </p>
-              <p>
-                Each project is an opportunity to push boundaries and create something truly memorable. Whether developing interactive installations, digital campaigns, or innovative web experiences, my work aims to captivate and inspire.
+              <p className='mt-[20px]'>
+              Each track is an exploration of rhythm and soul—whether I'm in the studio laying down vocals or performing live on stage, my goal is to move people through sound. Music isn’t just what I do, it's who I am.
               </p>
             </div>
             
             {/* Stats with counter animation */}
-            <div className={`grid grid-cols-3 gap-4 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} transition-all duration-700 delay-900`}>
+            {/* <div className={`grid grid-cols-3 gap-4 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} transition-all duration-700 delay-900`}>
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-white">{stat.value}+</div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </div>
               ))}
-            </div>
+            </div> */}
             
             {/* CTA Button with hover effect */}
             <div className={`mt-8 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} transition-all duration-700 delay-1000`}>
