@@ -96,7 +96,7 @@ export default function ModelAboutSection() {
               ith over a decade of dedication to music, I craft sounds that tell stories, evoke emotion, and connect with audiences on a deep level. From writing lyrics to producing beats, every note is a reflection of my journey and artistic vision.
               </p>
               <p className='mt-[20px]'>
-              Each track is an exploration of rhythm and soul—whether I'm in the studio laying down vocals or performing live on stage, my goal is to move people through sound. Music isn’t just what I do, it's who I am.
+              Each track is an exploration of rhythm and soul—whether I&lsquo; m in the studio laying down vocals or performing live on stage, my goal is to move people through sound. Music isn&lsquo;t just what I do, it&lsquo;s who I am.
               </p>
             </div>
             
