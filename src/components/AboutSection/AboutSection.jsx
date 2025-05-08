@@ -61,7 +61,7 @@ export default function ModelAboutSection() {
   };
   
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-t to-black from-[#111111] text-white pb-[120px] mt-[50px]">
+    <section ref={sectionRef} className="py-20  text-white pb-[120px] mt-[50px]">
       <div className="max-w-[1150px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Image column with parallax effect */}

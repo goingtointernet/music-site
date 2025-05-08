@@ -3,7 +3,8 @@ import AlbumsCard from "@/components/AlbumsCard/AlbumsCard";
 import Footer from "@/components/Footer/Footer";
 import HomeHero from "@/components/HomeHero/HomeHero";
 import Navbar from "@/components/Navbar/Navbar";
-import PatnersLogo from "@/components/PatnersLogo/PatnersLogo";
+import { ShootingStars } from "@/components/ShootingStar/ShootingStar";
+import { StarsBackground } from "@/components/StarsBackground/StarsBackground";
 
 export default function Home() {
   return (
@@ -12,9 +13,10 @@ export default function Home() {
       <HomeHero/>
       <marquee className="marquee-ele" behavior="alternate">FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music
       </marquee> 
-      <ModelAboutSection/>
-      <PatnersLogo/>    
+      {/* <ModelAboutSection/> */}
       <Footer/>
+      <ShootingStars />
+      <StarsBackground />
     </div>
   );
 }
