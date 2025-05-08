@@ -13,7 +13,6 @@ export default function Home() {
       <marquee className="marquee-ele" behavior="alternate">FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music - FORALLUS Music
       </marquee> 
       <ModelAboutSection/>
-      <AlbumsCard/>
       <PatnersLogo/>    
       <Footer/>
     </div>
