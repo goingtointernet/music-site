@@ -93,7 +93,7 @@ export const StarsBackground = ({
 
         if (star.twinkleSpeed !== null) {
           star.opacity =
-            0.5 +
+            0.8 +
             Math.abs(Math.sin((Date.now() * 0.001) / star.twinkleSpeed) * 0.5);
         }
       });
