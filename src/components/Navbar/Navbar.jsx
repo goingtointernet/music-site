@@ -55,10 +55,10 @@ export default function Navbar() {
               Store
             </Link>
             <Link href="#touuring"  className="block p-4 hover:text-gray-300 transition-colors border border-[#ffffff12] text-[14px]">
-              Touuring 
+              Touring 
             </Link>
             <Link href="#artist"  className="block p-4 hover:text-gray-300 transition-colors border border-[#ffffff12] text-[14px]">
-              Artist 
+              Artists
             </Link>
             <Link href="/contact"  className="block p-4 hover:text-gray-300 transition-colors border border-[#ffffff12] text-[14px]">
               Contact

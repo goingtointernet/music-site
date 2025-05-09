@@ -1,4 +1,4 @@
-import { faApple, faInstagram, faMedium, faSoundcloud, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faApple, faInstagram, faMedium, faSoundcloud, faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React from 'react'
@@ -9,11 +9,11 @@ const links = [
         link: "#"
     },
     {
-        label: "Touuring",
+        label: "Touring",
         link: "#"
     },
     {
-        label: "Artist",
+        label: "Honor",
         link: "#"
     },
     {
@@ -44,6 +44,11 @@ const socialLink = [
         title:"SoundCloud",
     },
     {
+        icon: <FontAwesomeIcon icon={faSpotify} />,
+        link: "#",
+        title:"Spotify",
+    },
+    {
         icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="tidal" width={"20px"} height={"20px"} fill='white'>
             <path d="m8.01 8.002 4-4.005 4.004 4-4 4.005zM24 8l-3.979-3.975L16.042 8l3.979 3.975zM.002 7.998l4.004-4 4 4.004-4.004 4z"></path>
             <path d="m8.01 15.997 4.004-4 4 4.004-4.004 4z"></path>
@@ -66,7 +71,7 @@ const socialLink = [
 const Footer = () => {
     return (
         <div className='bg-black xl:p-[0_20px] flex flex-wrap gap-[20px] justify-between items-center flex-col xl:flex-row border-t border-t-[#ffffff17] mt-[50px] z-10 p-[20px]'>
-            <span className='text-[14px] font-[400] text-textColor opacity-60 text-center md:text-start'>© Copyright 2025 Forallux V.A all rights reserved.</span>
+            <span className='text-[14px] font-[400] text-textColor opacity-60 text-center md:text-start'>© Copyright 2025 Forallus.V.A all rights reserved.</span>
             <div className="flex justify-center items-center flex-wrap md:flex-nowrap max-w-[70%] gap-[10px] xl:gap-0">
                 {socialLink?.map((item, index) => (
                     <a
