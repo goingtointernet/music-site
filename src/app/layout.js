@@ -4,8 +4,8 @@ import "../lib/fontawesome";
 import NextTopLoader from "nextjs-toploader";
 
 export const metadata = {
-  title: "Music Website",
-  description: "Home Music Website",
+  title: "Forallus - Music Artist",
+  description: "Forallus - Music Artist",
 };
 
 export default function RootLayout({ children }) {
