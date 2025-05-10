@@ -427,7 +427,7 @@ export function TouringSection() {
         </motion.div>
         <div
           className="absolute w-full bottom-0 inset-x-0 h-40 pointer-events-none select-none  z-40" />
-        <div className="absolute w-full -bottom-[50px] md:-bottom-40 h-[300px] md:h-full z-10 ml-[-20px] pb-[70px] md:pb-[130px]">
+        <div className="absolute w-full -bottom-[125px] md:-bottom-40 h-[350px] md:h-full z-10 ml-[-20px] pb-[105px] md:pb-[130px]">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
