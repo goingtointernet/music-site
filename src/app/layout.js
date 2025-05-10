@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
       >
-        <NextTopLoader color="#ffffff" />
+        <NextTopLoader color="#ffffff" zIndex={"30005"} />
        <Toaster />
         {children}
       </body>

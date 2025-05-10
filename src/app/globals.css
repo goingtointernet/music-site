@@ -9,6 +9,7 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: 'poppins';
+  scroll-behavior: smooth;
 }
 ul{
   list-style: none;
@@ -34,6 +35,10 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+   .animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
   }
 }
 /* Marquee  */

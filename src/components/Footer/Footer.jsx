@@ -6,19 +6,19 @@ import React from 'react'
 const links = [
     {
         label: "Artists",
-        link: "#"
+        link: "#artists"
     },
     {
         label: "Touring",
-        link: "#"
+        link: "#touring"
     },
     {
         label: "Honor",
-        link: "#"
+        link: "#honor"
     },
     {
         label: "Store",
-        link: "#"
+        link: "#store"
     }
 ]
 
@@ -71,7 +71,7 @@ const socialLink = [
 const Footer = () => {
     return (
         <div className='bg-black xl:p-[0_20px] flex flex-wrap gap-[20px] justify-between items-center flex-col xl:flex-row border-t border-t-[#ffffff17] mt-[50px] z-10 p-[20px]'>
-            <span className='text-[14px] font-[400] text-textColor opacity-60 text-center md:text-start'>© Copyright 2025 Forallus.V.A all rights reserved.</span>
+            <span className='text-[14px] font-[400] text-textColor opacity-60 text-center md:text-start'>© Copyright 2025 FORALLUS .V.A. all rights reserved.</span>
             <div className="flex justify-center items-center flex-wrap md:flex-nowrap max-w-[70%] gap-[10px] xl:gap-0">
                 {socialLink?.map((item, index) => (
                     <a

@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className={`${!isMenuOpen ? "bg-gradient-to-t from-transparent to-black bg-opacity-80":"bg-black"} fixed left-0 top-0 w-full  text-white z-[4002]`}>
+    <nav className={`bg-gradient-to-t from-transparent to-black fixed left-0 top-0 w-full  text-white z-[4002]`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-[100px]">
           {/* Logo and Plus/Cross Icon */}
@@ -47,20 +47,20 @@ export default function Navbar() {
       {/* Mobile menu, show/hide based on menu state */}
       {isMenuOpen && (
         <div>
-          <div className="bg-black max-w-7xl mx-auto bg-opacity-95 px-4 pt-2 pb-4 space-y-2">
-            <Link href="#about" className="block p-4 hover:text-gray-300 transition-colors border border-[#ffffff12] text-[14px]">
+          <div className="bg-black/95 max-w-7xl mx-auto bg-opacity-95 px-4 pt-2 pb-4 space-y-2">
+            <Link href="#about" onClick={()=>setIsMenuOpen(false)} className="block p-4 hover:text-gray-300 transition-colors border border-[#ffffff12] text-[14px]">
               About
             </Link>
-            <Link href="#store"  className="block p-4 hover:text-gray-300 transition-colors border border-[#ffffff12] text-[14px]">
+            <Link href="#store" onClick={()=>setIsMenuOpen(false)}  className="block p-4 hover:text-gray-300 transition-colors border border-[#ffffff12] text-[14px]">
               Store
             </Link>
-            <Link href="#touuring"  className="block p-4 hover:text-gray-300 transition-colors border border-[#ffffff12] text-[14px]">
-              Touring 
-            </Link>
-            <Link href="#artist"  className="block p-4 hover:text-gray-300 transition-colors border border-[#ffffff12] text-[14px]">
+            <Link href="#artists" onClick={()=>setIsMenuOpen(false)} className="block p-4 hover:text-gray-300 transition-colors border border-[#ffffff12] text-[14px]">
               Artists
             </Link>
-            <Link href="/contact"  className="block p-4 hover:text-gray-300 transition-colors border border-[#ffffff12] text-[14px]">
+            <Link href="#touring" onClick={()=>setIsMenuOpen(false)} className="block p-4 hover:text-gray-300 transition-colors border border-[#ffffff12] text-[14px]">
+              Touring 
+            </Link>
+            <Link href="#contact" onClick={()=>setIsMenuOpen(false)} className="block p-4 hover:text-gray-300 transition-colors border border-[#ffffff12] text-[14px]">
               Contact
             </Link>
           </div>
