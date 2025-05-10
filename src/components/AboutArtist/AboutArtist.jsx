@@ -77,7 +77,7 @@ export default function AboutArtist() {
             <div ref={statsRef} className="grid grid-cols-3 gap-4">
               <div className="stat-item opacity-0 transform translate-y-10 transition-all duration-700 delay-100 backdrop-blur-md bg-black/30 px-4 py-6 md:p-6  rounded-xl border border-white/10 hover:border-white/30 hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all group">
                 <span className="block text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 group-hover:from-white group-hover:to-white transition-all duration-300">
-                  3M+
+                  100B+
                 </span>
                 <span className="text-gray-400 text-sm group-hover:text-white transition-all duration-300">
                   STREAMS
@@ -93,7 +93,7 @@ export default function AboutArtist() {
 
               <div className="stat-item opacity-0 transform translate-y-10 transition-all duration-700 delay-300 backdrop-blur-md bg-black/30 px-4 py-6 md:p-6  rounded-xl border border-white/10 hover:border-white/30 hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all group">
                 <span className="block text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 group-hover:from-white group-hover:to-white transition-all duration-300">
-                  10+
+                  7+
                 </span>
                 <span className="text-gray-400 text-sm group-hover:text-white transition-all duration-300">ALBUMS</span>
               </div>
