@@ -30,7 +30,7 @@ export function TouringSection() {
   autoRotate: true,
   autoRotateSpeed: 0.5,
 };
-  const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+  const colors = ["#2dc653", "#6ede8a", "#6ede8a"];
  
   const generateArcs = (baseCount = 14, variations = 3) => {
   const orders = Array.from({ length: baseCount }, (_, i) => i + 1);
