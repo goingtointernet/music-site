@@ -88,9 +88,9 @@ export default function StoreItems() {
     },
     {
       id: 5,
-      name: "Forallus Symbol",
+      name: "FORALLUS Global Symbol",
       description:
-        "More than a collectible — the Forallus Symbol represents identity, unity, and the deeper meaning behind the music. Limited in existence, infinite in significance. A rare emblem for those who truly understand.",
+        "More than a collectible — the FORALLUS Global Symbol represents identity, unity, and the deeper meaning behind the music. Limited in existence, infinite in significance. A rare emblem for those who truly understand.",
       price: "$-Priceless",
       image: "/images/pr5.jpg",
       colors: null,
