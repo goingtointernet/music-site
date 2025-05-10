@@ -256,7 +256,7 @@ export default function StoreItems() {
               <DialogClose onClick={() => setOpen(false)} />
 
               <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="relative h-[320px] md:h-[400px] w-full">
+                <div className="relative h-[320px] md:h-[450px] w-full">
                   <Image
                     src={selectedItem.colors ? getCurrentImage(selectedItem) : selectedItem.image || "/placeholder.svg"}
                     alt={selectedItem.name}
