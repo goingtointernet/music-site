@@ -131,7 +131,7 @@ export default function ContactSection() {
                 <h4 className="text-xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
                   Message Sent!
                 </h4>
-                <p className="text-gray-300">Thank you for reaching out. We'll get back to you soon.</p>
+                <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
               </div>
             ) : (
               <form

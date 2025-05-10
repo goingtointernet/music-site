@@ -68,10 +68,10 @@ export default function AboutArtist() {
             </h2>
 
             <div className="space-y-6 text-gray-300 backdrop-blur-md bg-black/20 p-8 rounded-xl border border-white/10 shadow-[0_0_25px_rgba(255,255,255,0.03)]">
-             <p className="text-lg"> I go by FORALLUS. V.A — not everyone needs to know who I am. My identity isn’t the story. The music is. </p>
-             <p className="text-lg"> I come from nowhere and everywhere. The underground shaped me. The noise, the silence, the chaos — it’s all part of what I create. Every sound I release is a piece of something real. Emotional. Raw. Honest. </p>
-             <p className="text-lg"> I’ve performed for thousands, but I’ve never needed a spotlight. What matters is the energy — the connection. If you've felt it, you know what I mean. </p>
-             <p className="text-lg"> I make music, art, and statements. Not just for the moment, but for the ones who see the bigger picture. This isn’t about fame — it’s about feeling. And I’m just getting started. </p>
+             <p className="text-lg"> I go by FORALLUS. V.A — not everyone needs to know who I am. My identity isn&apos;t the story. The music is. </p>
+             <p className="text-lg"> I come from nowhere and everywhere. The underground shaped me. The noise, the silence, the chaos — it&apos;s all part of what I create. Every sound I release is a piece of something real. Emotional. Raw. Honest. </p>
+             <p className="text-lg"> I&apos;ve performed for thousands, but I&apos;ve never needed a spotlight. What matters is the energy — the connection. If you&apos;ve felt it, you know what I mean. </p>
+             <p className="text-lg"> I make music, art, and statements. Not just for the moment, but for the ones who see the bigger picture. This isn&apos;t about fame — it&apos;s about feeling. And I&apos;m just getting started. </p>
             </div>
 
             <div ref={statsRef} className="grid grid-cols-3 gap-4">
