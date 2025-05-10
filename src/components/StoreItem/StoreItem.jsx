@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Autoplay } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/navigation"
+import Link from "next/link"
 
 export default function StoreItems() {
   const [open, setOpen] = useState(false)
@@ -51,7 +52,7 @@ export default function StoreItems() {
       name: "Forallus Music CD",
       description:
         "A rare collector's piece that captures the soul of Forallus. This limited-edition music CD is a physical embodiment of the artist's sound journey — once gone, it's gone forever. Timeless. Priceless.",
-      price: "$-Priceless",
+      price: "Priceless",
       image: "/images/pr1.jpg",
       colors: null,
     },
@@ -60,7 +61,7 @@ export default function StoreItems() {
       name: "Limited Edition CD",
       description:
         "Crafted for true fans and collectors, this CD is part of a strictly limited run. It's not just music — it's a keepsake of the Forallus legacy. A priceless artifact for those who understand the value of rarity.",
-      price: "$-Priceless",
+      price: "Priceless",
       image: "/images/pr2.jpg",
       colors: null,
     },
@@ -68,7 +69,7 @@ export default function StoreItems() {
       id: 3,
       name: "Forallus T-Shirt",
       description: 'Wear the vision. This exclusive Forallus tee blends minimal design with deep artistic meaning. Limited in number, infinite in impact. A priceless piece of the movement.',
-      price: "$-Priceless",
+      price: "Priceless",
       colors: [
         { name: "White", value: "white", image: "/images/pr31.jpg" },
         { name: "Black", value: "black", image: "/images/pr3-black.jpg" }
@@ -79,7 +80,7 @@ export default function StoreItems() {
       id: 4,
       name: "Limited Edition T-Shirt",
       description: "Designed in collaboration with FORALLUS. V.A., this shirt is available for a short time only. Ethically made, artist-approved, and impossible to replicate. Once it's gone, it's gone — making it truly priceless.",
-      price: "$-Priceless",
+      price: "Priceless",
       colors: [
         { name: "White", value: "white", image: "/images/pr41.jpg" },
         { name: "Black", value: "black", image: "/images/pr4-black.jpg" }
@@ -91,7 +92,7 @@ export default function StoreItems() {
       name: "FORALLUS Global Symbol",
       description:
         "More than a collectible — the FORALLUS Global Symbol represents identity, unity, and the deeper meaning behind the music. Limited in existence, infinite in significance. A rare emblem for those who truly understand.",
-      price: "$-Priceless",
+      price: "Priceless",
       image: "/images/pr5.jpg",
       colors: null,
     },
@@ -305,9 +306,9 @@ export default function StoreItems() {
 
                   <div className="flex justify-between items-center pt-4">
                     <span className="text-xl font-bold text-gray-400">{selectedItem.price}</span>
-                    <span className="bg-white/20 backdrop-blur-md border border-white/50 text-white px-6 py-2 font-bold rounded-full">
-                      SOLD OUT
-                    </span>
+                    <Link href={'/#contact'} onClick={()=>{setSelectedItem(null);setOpen(false)}} className="backdrop-blur-md cursor-pointer bg-white/10 border border-white/10 text-white px-4 py-2 font-[500] text-sm rounded-full">
+                      Price Request
+                    </Link>
                   </div>
                 </div>
               </div>

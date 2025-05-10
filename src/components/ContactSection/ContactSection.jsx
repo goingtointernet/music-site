@@ -3,13 +3,13 @@ import { useState, useRef, useEffect } from "react"
 import { Button } from "../ui/custom-button"
 import { Input } from "../ui/custom-input"
 import { Textarea } from "../ui/custom-textarea"
-import { Instagram, Twitter, Youtube, Music, Send, AppleIcon } from "lucide-react"
+import {Send } from "lucide-react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faApple, faSoundcloud, faSpotify } from "@fortawesome/free-brands-svg-icons"
+import { faApple, faInstagram, faSoundcloud, faSpotify, faYoutube } from "@fortawesome/free-brands-svg-icons"
 
 const socialLinks = [
-  { href: '#', icon: <Instagram size={24} />, name: 'Instagram' },
-  { href: '#', icon: <Youtube size={24} />, name: 'YouTube' },
+  { href: '#', icon:<FontAwesomeIcon icon={faInstagram} />, name: 'Instagram' },
+  { href: '#', icon: <FontAwesomeIcon icon={faYoutube} />, name: 'YouTube' },
   { href: '#', icon: <FontAwesomeIcon icon={faApple} />, name: 'Apple Music' },
   { href: '#', icon:  <FontAwesomeIcon icon={faSoundcloud} />, name: 'SoundCloud' },
   { href: '#', icon: <FontAwesomeIcon icon={faSpotify} />, name: 'Spotify' },
