@@ -5,12 +5,12 @@ import { Input } from "../ui/custom-input"
 import { Textarea } from "../ui/custom-textarea"
 import { Instagram, Twitter, Youtube, Music, Send, AppleIcon } from "lucide-react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSoundcloud, faSpotify } from "@fortawesome/free-brands-svg-icons"
+import { faApple, faSoundcloud, faSpotify } from "@fortawesome/free-brands-svg-icons"
 
 const socialLinks = [
   { href: '#', icon: <Instagram size={24} />, name: 'Instagram' },
   { href: '#', icon: <Youtube size={24} />, name: 'YouTube' },
-  { href: '#', icon: <AppleIcon size={24} />, name: 'Apple Music' },
+  { href: '#', icon: <FontAwesomeIcon icon={faApple} />, name: 'Apple Music' },
   { href: '#', icon:  <FontAwesomeIcon icon={faSoundcloud} />, name: 'SoundCloud' },
   { href: '#', icon: <FontAwesomeIcon icon={faSpotify} />, name: 'Spotify' },
   { href: '#', icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="tidal" width={"20px"} height={"20px"} fill='white'>
@@ -131,7 +131,7 @@ export default function ContactSection() {
                 <h4 className="text-xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
                   Message Sent!
                 </h4>
-                <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
+                <p className="text-gray-300">A representative will contact you once they reach your request send a short summary of the product and what it will want.</p>
               </div>
             ) : (
               <form

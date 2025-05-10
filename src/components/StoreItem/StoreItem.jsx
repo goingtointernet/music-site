@@ -70,10 +70,10 @@ export default function StoreItems() {
       description: 'Wear the vision. This exclusive Forallus tee blends minimal design with deep artistic meaning. Limited in number, infinite in impact. A priceless piece of the movement.',
       price: "$-Priceless",
       colors: [
-        { name: "White", value: "white", image: "/images/pr3.jpg" },
+        { name: "White", value: "white", image: "/images/pr31.jpg" },
         { name: "Black", value: "black", image: "/images/pr3-black.jpg" }
       ],
-      image: "/images/pr3.jpg", // Default image
+      image: "/images/pr31.jpg", // Default image
     },
     {
       id: 4,
@@ -81,10 +81,10 @@ export default function StoreItems() {
       description: "Designed in collaboration with FORALLUS. V.A., this shirt is available for a short time only. Ethically made, artist-approved, and impossible to replicate. Once it's gone, it's gone — making it truly priceless.",
       price: "$-Priceless",
       colors: [
-        { name: "White", value: "white", image: "/images/pr4.jpg" },
+        { name: "White", value: "white", image: "/images/pr41.jpg" },
         { name: "Black", value: "black", image: "/images/pr4-black.jpg" }
       ],
-      image: "/images/pr4.jpg", // Default image
+      image: "/images/pr41.jpg", // Default image
     },
     {
       id: 5,
@@ -235,8 +235,8 @@ export default function StoreItems() {
                           <span className="text-gray-400  text-[14px] md:text-[16px]">{item.price}</span>
                           {/* Color options in card */}
                           
-                          <span className="bg-white/20 backdrop-blur-md border border-white/50 text-white px-4 py-1 font-bold text-sm rounded-full">
-                            SOLD OUT
+                          <span  onClick={() => openModal(item)} className="backdrop-blur-md cursor-pointer bg-white/10 border border-white/10 text-white px-4 py-1 font-[500] text-sm rounded-full">
+                            Learn More
                           </span>
                         </div>
                       </div>
