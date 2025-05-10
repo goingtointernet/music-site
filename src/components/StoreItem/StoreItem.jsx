@@ -307,7 +307,7 @@ export default function StoreItems() {
                   <div className="flex justify-between items-center pt-4">
                     <span className="text-xl font-bold text-gray-400">{selectedItem.price}</span>
                     <Link href={'/#contact'} onClick={()=>{setSelectedItem(null);setOpen(false)}} className="backdrop-blur-md cursor-pointer bg-white/10 border border-white/10 text-white px-4 py-2 font-[500] text-sm rounded-full">
-                      Price Request
+                      Piece Request
                     </Link>
                   </div>
                 </div>
