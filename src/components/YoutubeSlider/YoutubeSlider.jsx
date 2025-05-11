@@ -8,6 +8,7 @@ import { Navigation, Autoplay } from "swiper/modules"
 // Import Swiper styles
 import "swiper/css"
 import "swiper/css/navigation"
+import { Spotlight } from "../ui/spotlight"
 
 export default function YoutubeSlider() {
   const sectionRef = useRef(null)
@@ -38,28 +39,28 @@ export default function YoutubeSlider() {
   const videos = [
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
-      title: "FORALLUS New",
-      thumbnail: "/images/pr1.jpg",
+      title: "Comming Soon",
+      thumbnail: "/images/m2.jpg",
     },
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
-      title: "FORALLUS - One Mind",
-      thumbnail: "/images/pr2.jpg",
+      title: "Comming Soon",
+      thumbnail: "/images/m2.jpg",
     },
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
-      title: "FORALLUS - One Heart",
-      thumbnail: "/images/pr6.jpg",
+      title: "Comming Soon",
+      thumbnail: "/images/m2.jpg",
     },
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
-      title: "FORALLUS - One Soul",
-      thumbnail: "/images/pr1.jpg",
+      title: "Comming Soon",
+      thumbnail: "/images/m2.jpg",
     },
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
-      title: "FORALLUS - Unplugged",
-      thumbnail: "/images/pr2.jpg",
+      title: "Comming Soon",
+      thumbnail: "/images/m2.jpg",
     },
   ]
 
@@ -67,21 +68,51 @@ export default function YoutubeSlider() {
     <>
 
       {activeVideo ? (
-        <div className="mb-16 fixed flex justify-center items-center left-0 top-0 w-full h-full z-[5002] bg-[#000000b2]">
-          <div className="max-w-5xl mx-auto flex flex-col justify-center max-h-[80vh] w-[90%] h-full">
+        <div className="mb-16 fixed flex justify-center items-center left-0 top-0 w-full h-full z-[5002] bg-black/80 backdrop-blur-sm">
+
+          <div className="max-w-5xl mx-auto flex flex-col justify-center max-h-[80vh] w-[90%] h-full relative animate-fade-in">
             <button
               onClick={() => setActiveVideo(null)}
-              className=" bg-black/50 ml-auto backdrop-blur-md p-2 rounded-full z-10 hover:bg-white/10 transition-colors"
+              className="bg-black/50 ml-auto backdrop-blur-md mb-[10px] p-2 rounded-full z-10 hover:bg-white/10 transition-colors border border-white/10"
             >
               <X size={20} className="text-white" />
             </button>
-            <div className="relative pb-[56.25%] bg-black h-0 overflow-hidden rounded-xl shadow-[0_0_50px_rgba(255,255,255,0.1)]">
-              <iframe
-                src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute top-0 left-0 w-full h-full rounded-xl"
-              />
+            <div className="relative pb-[45.25%] bg-black h-0 overflow-hidden rounded-xl border border-white/10 animate-scale-in shadow-[0_0_70px_rgba(255,255,255,0.05)]">
+              {/* Left spotlight - fixed position, subtle animation */}
+              <div className="spotlight fixed left-0 top-0 h-full w-1/3 pointer-events-none -z-10" aria-hidden="true">
+                <div className="h-full w-full bg-gradient-to-r from-[#111111] to-transparent animate-spotlight-sweep"></div>
+              </div>
+
+              {/* Right spotlight - fixed position, subtle animation */}
+              <div className="spotlight fixed right-0 top-0 h-full w-1/3 pointer-events-none -z-10" aria-hidden="true">
+                <div className="h-full w-full bg-gradient-to-l from-[#111111] to-transparent animate-spotlight-sweep-right"></div>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-black opacity-50 z-0"></div>
+              {/* Decorative elements */}
+              <Spotlight direction="left" className={"opacity-0  top-[-15%]"} />
+              <Spotlight direction="right" className="right-[-140%] md:!right-[-86%] top-[-15%]" />
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-full text-center">
+                <div className="inline-block relative">
+                  {/* Light beam effect */}
+                  <div className="light-beam absolute h-[150vh] w-[20px] bg-white/5 blur-xl top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-light-beam"></div>
+
+                  {/* Main text with clean, minimal styling */}
+                  <div className="overflow-hidden">
+                    <h2 className="text-3xl sm:text-4xl md:text-7xl font-[600] tracking-widest  bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-500 to-white uppercase relative animate-text-reveal opacity-0">
+                      {/* Subtle text shadow */}
+                      <span className="absolute -top-0.5 -left-0.5 text-gray-700/20 filter blur-sm">COMING SOON</span>
+
+                      {/* Main text */}
+                      <span className="relative">
+                        COMING SOON
+                      </span>
+                    </h2>
+                  </div>
+
+                  {/* Minimal line effect */}
+                  <div className="mt-6 h-px w-full bg-gradient-to-r from-transparent via-white/30 to-transparent animate-width-expand"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -165,8 +196,8 @@ export default function YoutubeSlider() {
                       >
                         <div className="relative">
                           <div className="absolute -inset-10 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-                          <div className="relative bg-white/20 backdrop-blur-md border border-white/50 rounded-full p-4 transform transition-transform duration-300 group-hover:scale-110">
-                            <Play className="h-8 w-8 text-white" />
+                          <div className="relative bg-white/20 backdrop-blur-md border border-white/50 rounded-full p-3 transform transition-transform duration-300 group-hover:scale-110">
+                            <img src={'/images/cd.png'} alt="cd" className="w-[50px] h-[50px] object-contain object-center spin" />
                           </div>
                         </div>
                       </div>

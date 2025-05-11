@@ -9,54 +9,133 @@ const World = dynamic(() => import("../Globe/globe").then((m) => m.World), {
 
 export function TouringSection() {
   const globeConfig = {
-  pointSize: 4,
-  globeColor: "#000000", // black
-  showAtmosphere: true,
-  atmosphereColor: "#FFFFFF", // white
-  atmosphereAltitude: 0.1,
-  emissive: "#000000", // black
-  emissiveIntensity: 0.1,
-  shininess: 0.9,
-  polygonColor: "rgba(255,255,255,0.7)", // white with transparency
-  ambientLight: "#FFFFFF", // white
-  directionalLeftLight: "#FFFFFF", // white
-  directionalTopLight: "#FFFFFF", // white
-  pointLight: "#FFFFFF", // white
-  arcTime: 1000,
-  arcLength: 0.9,
-  rings: 1,
-  maxRings: 3,
-  initialPosition: { lat: 22.3193, lng: 114.1694 },
-  autoRotate: true,
-  autoRotateSpeed: 0.5,
-};
+    pointSize: 4,
+    globeColor: "#000000", // black
+    showAtmosphere: true,
+    atmosphereColor: "#FFFFFF", // white
+    atmosphereAltitude: 0.1,
+    emissive: "#000000", // black
+    emissiveIntensity: 0.1,
+    shininess: 0.9,
+    polygonColor: "rgba(255,255,255,0.7)", // white with transparency
+    ambientLight: "#FFFFFF", // white
+    directionalLeftLight: "#FFFFFF", // white
+    directionalTopLight: "#FFFFFF", // white
+    pointLight: "#FFFFFF", // white
+    arcTime: 1000,
+    arcLength: 0.9,
+    rings: 1,
+    maxRings: 3,
+    initialPosition: { lat: 22.3193, lng: 114.1694 },
+    autoRotate: true,
+    autoRotateSpeed: 0.5,
+  };
   const colors = ["#d4d4d4", "#b8b8b8", "#d4d4d4"];
 
- 
+  const cities = [
+    { name: "Anchorage", lat: 61.2170, lng: -149.8980 },
+    { name: "Buenos Aires", lat: -34.6037, lng: -58.3816 },
+    { name: "Auckland", lat: -36.8485, lng: 174.7633 },
+    { name: "Vancouver", lat: 49.2827, lng: -123.1207 },
+    { name: "Cape Town", lat: -33.9249, lng: 18.4241 },
+    { name: "Iqaluit", lat: 63.7467, lng: -68.5145 },
+    { name: "Reykjavik", lat: 64.1355, lng: -21.8954 },
+    { name: "Oslo", lat: 59.9139, lng: 10.7522 },
+    { name: "Sydney", lat: -33.8688, lng: 151.2093 },
+    { name: "Dubai", lat: 25.276987, lng: 55.296249 },
+    { name: "Lima", lat: -12.0464, lng: -77.0428 },
+    { name: "Helsinki", lat: 60.1695, lng: 24.9354 },
+    { name: "Santiago", lat: -33.4489, lng: -70.6693 },
+    { name: "Addis Ababa", lat: 9.0316, lng: 38.7469 },
+    { name: "Port Moresby", lat: -9.4438, lng: 147.1803 },
+    { name: "Wellington", lat: -41.2867, lng: 174.7762 },
+    { name: "Freetown", lat: 8.4657, lng: -13.2317 },
+    { name: "Nouakchott", lat: 18.0858, lng: -15.9784 },
+    { name: "Windhoek", lat: -22.5597, lng: 17.0836 },
+    { name: "Dakar", lat: 14.6928, lng: -17.4467 },
+    { name: "Antananarivo", lat: -18.8792, lng: 47.5079 },
+    { name: "Suva", lat: -17.7134, lng: 178.0650 },
+    { name: "Baku", lat: 40.4093, lng: 49.8671 },
+    { name: "Cairo", lat: 30.0444, lng: 31.2357 },
+    { name: "Moscow", lat: 55.7558, lng: 37.6173 },
+    { name: "Accra", lat: 5.6037, lng: -0.1870 },
+    { name: "Kinshasa", lat: -4.4419, lng: 15.2663 },
+    { name: "Algiers", lat: 36.7528, lng: 3.0420 },
+    { name: "Lagos", lat: 6.5244, lng: 3.3792 },
+    { name: "New Delhi", lat: 28.6139, lng: 77.2090 },
+    { name: "Bengaluru", lat: 12.9716, lng: 77.5946 },
+    { name: "Jakarta", lat: -6.2088, lng: 106.8456 },
+    { name: "Bangkok", lat: 13.7563, lng: 100.5018 },
+    { name: "Manila", lat: 14.5995, lng: 120.9842 },
+    { name: "Seoul", lat: 37.5665, lng: 126.9780 },
+    { name: "Tokyo", lat: 35.6895, lng: 139.6917 },
+    { name: "Shenzhen", lat: 22.5431, lng: 114.0579 },
+    { name: "Beijing", lat: 39.9042, lng: 116.4074 },
+    { name: "Jakarta", lat: -6.2088, lng: 106.8456 },
+    { name: "Singapore", lat: 1.3521, lng: 103.8198 },
+    { name: "Taipei", lat: 25.0330, lng: 121.5654 },
+    { name: "Hong Kong", lat: 22.3193, lng: 114.1694 },
+    { name: "Lagos", lat: 6.5244, lng: 3.3792 },
+    { name: "Caracas", lat: 10.4925, lng: -66.8778 },
+    { name: "Brasília", lat: -15.7801, lng: -47.9292 },
+    { name: "Montevideo", lat: -34.9011, lng: -56.1645 },
+    { name: "La Paz", lat: -16.5000, lng: -68.1193 },
+    { name: "San Francisco", lat: 37.7749, lng: -122.4194 },
+    { name: "Tbilisi", lat: 41.7151, lng: 44.8271 },
+    { name: "Colombo", lat: 6.9271, lng: 79.8612 },
+    { name: "Accra", lat: 5.6037, lng: -0.1870 },
+    { name: "Kigali", lat: -1.9441, lng: 30.0619 },
+    { name: "Lagos", lat: 6.5244, lng: 3.3792 },
+    { name: "Jakarta", lat: -6.2088, lng: 106.8456 },
+    { name: "Mexico City", lat: 19.4326, lng: -99.1332 },
+    { name: "Rio de Janeiro", lat: -22.9068, lng: -43.1729 },
+    { name: "Mumbai", lat: 19.0760, lng: 72.8777 },
+    { name: "Madrid", lat: 40.4168, lng: -3.7038 },
+    { name: "London", lat: 51.5074, lng: -0.1278 },
+    { name: "Paris", lat: 48.8566, lng: 2.3522 },
+    { name: "Berlin", lat: 52.5200, lng: 13.4050 },
+    { name: "Rome", lat: 41.9028, lng: 12.4964 },
+    { name: "Stockholm", lat: 59.3293, lng: 18.0686 },
+    { name: "Amsterdam", lat: 52.3676, lng: 4.9041 }
+  ];
+
+
   const generateArcs = (baseCount = 14, variations = 3) => {
-  const orders = Array.from({ length: baseCount }, (_, i) => i + 1);
-  const arcGroups = orders.flatMap(order => 
-    Array.from({ length: variations }, () => ({
-      order,
-      startLat: (Math.random() * 180 - 90),
-      startLng: (Math.random() * 360 - 180),
-      endLat: (Math.random() * 180 - 90),
-      endLng: (Math.random() * 360 - 180),
-      arcAlt: Math.random() * 0.7 + 0.1,
-      color: colors[Math.floor(Math.random() * colors.length)],
-    }))
-  );
-  return arcGroups;
-};
+    const arcGroups = [];
+
+    for (let i = 0; i < baseCount; i++) {
+      for (let j = 0; j < variations; j++) {
+        const start = cities[Math.floor(Math.random() * cities.length)];
+        let end = cities[Math.floor(Math.random() * cities.length)];
+
+        // Ensure start and end are not the same
+        while (end === start) {
+          end = cities[Math.floor(Math.random() * cities.length)];
+        }
+
+        arcGroups.push({
+          order: i + 1,
+          startLat: start.lat,
+          startLng: start.lng,
+          endLat: end.lat,
+          endLng: end.lng,
+          arcAlt: Math.random() * 0.7 + 0.1,
+          color: colors[Math.floor(Math.random() * colors.length)]
+        });
+      }
+    }
+
+    return arcGroups;
+  };
 
   const sampleArcs = [
-  ...generateArcs(14, 3),  // Original 14 orders with 3 variations each
-  ...generateArcs(14, 2)   // New 14 orders with 2 variations each
-].map((arc, index) => ({
-  ...arc,
-  order: index < 42 ? Math.ceil((index + 1)/3) : Math.ceil((index - 42 + 1)/2) + 14,
-  arcAlt: arc.arcAlt + (index % 3 * 0.1)  // Add altitude variation
-}));
+    ...generateArcs(14, 3),  // Original 14 orders with 3 variations each
+    ...generateArcs(14, 2)   // New 14 orders with 2 variations each
+  ].map((arc, index) => ({
+    ...arc,
+    order: index < 42 ? Math.ceil((index + 1) / 3) : Math.ceil((index - 42 + 1) / 2) + 14,
+    arcAlt: arc.arcAlt + (index % 3 * 0.1)  // Add altitude variation
+  }));
 
 
   return (
@@ -85,10 +164,10 @@ export function TouringSection() {
           <h2 className="text-[2.2rem] text-center md:text-[4rem] mx-auto font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             Touring the World
           </h2>
-            <p
-              className="text-center text-base md:text-lg font-normal text-paragraphColor max-w-[700px] mt-2 mx-auto">
-              One Artist. Endless Destinations. Bringing sound to streets, stages, and souls worldwide. Every stop is a moment, every show a connection.
-            </p>
+          <p
+            className="text-center text-base md:text-lg font-normal text-paragraphColor max-w-[700px] mt-2 mx-auto">
+            One Artist. Endless Destinations. Bringing sound to streets, stages, and souls worldwide. Every stop is a moment, every show a connection.
+          </p>
         </motion.div>
         <div
           className="absolute w-full bottom-0 inset-x-0 h-40 pointer-events-none select-none  z-40" />
