@@ -97,16 +97,21 @@ export function TouringSection() {
     { name: "Rome", lat: 41.9028, lng: 12.4964 },
     { name: "Stockholm", lat: 59.3293, lng: 18.0686 },
     { name: "Amsterdam", lat: 52.3676, lng: 4.9041 },
-    { name: "Tashkent", lat: 41.2995, lng: 69.2401 },           // ~3,000 km from Baku
-    { name: "Kabul", lat: 34.5553, lng: 69.2075 },              // ~1,000 km from New Delhi
-    { name: "Ulaanbaatar", lat: 47.8864, lng: 106.9057 },       // ~1,200 km from Beijing
-    { name: "Tbilisi", lat: 41.7151, lng: 44.8271 },            // ~800 km from Baku
-    { name: "Muscat", lat: 23.5880, lng: 58.3829 },             // ~400 km from Dubai
-    { name: "Riyadh", lat: 24.7136, lng: 46.6753 },             // ~900 km from Cairo
-    { name: "Doha", lat: 25.276987, lng: 51.5200 },             // ~650 km from Dubai
-    { name: "Tunis", lat: 36.8065, lng: 10.1815 },              // ~800 km from Algiers
-    { name: "Yerevan", lat: 40.1792, lng: 44.4991 },            // ~1,000 km from Baku
+    { name: "Tashkent", lat: 41.2995, lng: 69.2401 },           
+    { name: "Kabul", lat: 34.5553, lng: 69.2075 },       
+    { name: "Ulaanbaatar", lat: 47.8864, lng: 106.9057 },  
+    { name: "Tbilisi", lat: 41.7151, lng: 44.8271 },  
+    { name: "Muscat", lat: 23.5880, lng: 58.3829 },  
+    { name: "Riyadh", lat: 24.7136, lng: 46.6753 }, 
+    { name: "Doha", lat: 25.276987, lng: 51.5200 }, 
+    { name: "Tunis", lat: 36.8065, lng: 10.1815 },
+    { name: "Yerevan", lat: 40.1792, lng: 44.4991 }, 
     { name: "Nur-Sultan", lat: 51.1605, lng: 71.4704 }, 
+    { name: "Sahara Desert Central", lat: 23.4162, lng: 25.6628 },
+    { name: "Rub' al Khali (Empty Quarter)", lat: 20.0000, lng: 50.0000 },
+    { name: "Gobi Desert Central", lat: 42.5900, lng: 105.0000 }, 
+    { name: "Karakum Desert", lat: 39.0000, lng: 59.0000 },
+    { name: "Great Victoria Desert", lat: -29.0000, lng: 130.0000 },
   ];
 
 
