@@ -96,7 +96,17 @@ export function TouringSection() {
     { name: "Berlin", lat: 52.5200, lng: 13.4050 },
     { name: "Rome", lat: 41.9028, lng: 12.4964 },
     { name: "Stockholm", lat: 59.3293, lng: 18.0686 },
-    { name: "Amsterdam", lat: 52.3676, lng: 4.9041 }
+    { name: "Amsterdam", lat: 52.3676, lng: 4.9041 },
+    { name: "Tashkent", lat: 41.2995, lng: 69.2401 },           // ~3,000 km from Baku
+    { name: "Kabul", lat: 34.5553, lng: 69.2075 },              // ~1,000 km from New Delhi
+    { name: "Ulaanbaatar", lat: 47.8864, lng: 106.9057 },       // ~1,200 km from Beijing
+    { name: "Tbilisi", lat: 41.7151, lng: 44.8271 },            // ~800 km from Baku
+    { name: "Muscat", lat: 23.5880, lng: 58.3829 },             // ~400 km from Dubai
+    { name: "Riyadh", lat: 24.7136, lng: 46.6753 },             // ~900 km from Cairo
+    { name: "Doha", lat: 25.276987, lng: 51.5200 },             // ~650 km from Dubai
+    { name: "Tunis", lat: 36.8065, lng: 10.1815 },              // ~800 km from Algiers
+    { name: "Yerevan", lat: 40.1792, lng: 44.4991 },            // ~1,000 km from Baku
+    { name: "Nur-Sultan", lat: 51.1605, lng: 71.4704 }, 
   ];
 
 
@@ -129,8 +139,8 @@ export function TouringSection() {
   };
 
   const sampleArcs = [
-    ...generateArcs(30, 5),  // Original 14 orders with 3 variations each
-    ...generateArcs(30, 3)   // New 14 orders with 2 variations each
+    ...generateArcs(40, 8),  // Original 14 orders with 3 variations each
+    ...generateArcs(40, 6)   // New 14 orders with 2 variations each
   ].map((arc, index) => ({
     ...arc,
     order: index < 42 ? Math.ceil((index + 1) / 3) : Math.ceil((index - 42 + 1) / 2) + 14,

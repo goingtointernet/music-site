@@ -183,18 +183,18 @@ export default function YoutubeSlider() {
                     onMouseLeave={() => setHoveredVideo(null)}
                   >
                     <div className="relative h-[250px] w-full overflow-hidden">
-                      <img
+                      {/* <img
                         src={video.thumbnail || "/placeholder.svg"}
                         alt={video.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
+                      /> */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60"></div>
 
                       <div
                         className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${hoveredVideo === video.id ? "opacity-100" : "opacity-100"
                           }`}
                       >
-                        <div className="relative">
+                        <div className="relative  mt-[10px]">
                           <div className="absolute -inset-10 bg-white/10 rounded-full blur-xl animate-pulse"></div>
                           <div className="relative bg-white/20 backdrop-blur-md border border-white/50 rounded-full p-3 transform transition-transform duration-300 group-hover:scale-110">
                             <img src={'/images/cd.png'} alt="cd" className="w-[50px] h-[50px] object-contain object-center spin" />
