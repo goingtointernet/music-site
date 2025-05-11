@@ -39,27 +39,27 @@ export default function YoutubeSlider() {
   const videos = [
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
-      title: "Comming Soon",
+      title: "Coming soon",
       thumbnail: "/images/m2.jpg",
     },
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
-      title: "Comming Soon",
+      title: "Coming soon",
       thumbnail: "/images/m2.jpg",
     },
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
-      title: "Comming Soon",
+      title: "Coming soon",
       thumbnail: "/images/m2.jpg",
     },
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
-      title: "Comming Soon",
+      title: "Coming soon",
       thumbnail: "/images/m2.jpg",
     },
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
-      title: "Comming Soon",
+      title: "Coming soon",
       thumbnail: "/images/m2.jpg",
     },
   ]
