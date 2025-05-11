@@ -25,27 +25,28 @@ const links = [
 const socialLink = [
     {
         icon: <FontAwesomeIcon icon={faInstagram} />,
-        link: "#",
+        link: "https://www.instagram.com/liltizzyz?igsh=eWdkZGh3aHdtbTVp&utm_source=qr",
         title:"Instagram",
     },
     {
         icon: <FontAwesomeIcon icon={faYoutube} />,
-        link: "#",
+        link: "https://youtube.com/@liltizzy?si=dw3eGi0pq7JTeoQ8",
         title:"Youtube",
     },
     {
         icon: <FontAwesomeIcon icon={faApple} />,
         link: "#",
         title:"Apple Music",
+         nextTab:false,
     },
     {
         icon: <FontAwesomeIcon icon={faSoundcloud} />,
-        link: "#",
+        link: "https://soundcloud.com/forallus?ref=clipboard&p=i&c=1&si=D05F97EC4E634682BD08556BBE4A5395&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
         title:"SoundCloud",
     },
     {
         icon: <FontAwesomeIcon icon={faSpotify} />,
-        link: "#",
+        link: "https://open.spotify.com/artist/4CqOCRFUAgyZX4gklU0gR6?si=N8LwTHtsQEe8GxvOnqAkrA",
         title:"Spotify",
     },
     {
@@ -62,7 +63,7 @@ const socialLink = [
             <path d="M20.8041 6c0-.37441-.2762-.69147-.647-.74289-.3709-.05143-.7229.17854-.8248.53883l-2.2039 7.79496v-4.0159c0-.34427-.2344-.64433-.5684-.72769-.3341-.08335-.6819.07141-.8437.37532l-2.6833 5.04177-1.1428-3.0059c-.1064-.2799-.3691-.4697-.6683-.4828-.2991-.0131-.5774.1531-.7078.4226l-.97191 2.0087-.24655-.6485c-.08909-.2344-.28942-.4087-.53385-.4646-.24443-.0559-.50062.014-.68273.1864l-.74794.7078-.9141-.6115c-.34427-.2303-.81008-.1379-1.04039.2064-.23032.3443-.13793.8101.20635 1.0404l1.41176.9444c.29109.1947.6782.1621.93256-.0786l.36592-.3463.46519 1.2236c.10641.2799.36913.4697.6683.4828.29918.0131.57749-.1531.70789-.4226l.9719-2.0087 1.1114 2.9235c.1045.275.3602.4635.6539.482.2936.0185.571-.1364.7092-.3961l2.0474-3.8469v6.4195c0 .3744.2761.6915.647.7429.3708.0514.7228-.1786.8247-.5388l2.204-7.795v3.6909c0 .2412.1159.4676.3116.6086.1957.1409.4472.1792.676.1028l1.9459-.65c.3929-.1313.605-.5561.4738-.949-.1313-.3929-.5561-.605-.949-.4738l-.9583.3201v-8.0587zM3 12.25c-.41421 0-.75.3358-.75.75 0 .4142.33579.75.75.75h.5c.41421 0 .75-.3358.75-.75 0-.4142-.33579-.75-.75-.75h-.5z"></path>
         </svg>
         ),
-        link: "#",
+        link: "https://audiomack.com/liltizzyz",
         title:"Audiomack",
     }
 ]
@@ -80,6 +81,7 @@ const Footer = () => {
                         title={item?.title}
                         className={`p-[10px] xl:p-[10px_20px] w-[45px] h-[45px] xl:w-full xl:h-full flex justify-center items-center hover:opacity-80 transition-opacity rounded-[50%] xl:rounded-none border border-[#ffffff18] xl:border-transparent xl:border-r shadow-lg xl:border-r-[#ffffff18] ${index === 0 ? 'border-l !border-l-[#ffffff18]' : ''
                             }`}
+                        target={`${item.link !="#" && "_blank"}`}
                     >
                         {item?.icon}
                     </a>
