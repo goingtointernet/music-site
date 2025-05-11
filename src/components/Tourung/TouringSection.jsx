@@ -129,8 +129,8 @@ export function TouringSection() {
   };
 
   const sampleArcs = [
-    ...generateArcs(14, 3),  // Original 14 orders with 3 variations each
-    ...generateArcs(14, 2)   // New 14 orders with 2 variations each
+    ...generateArcs(30, 5),  // Original 14 orders with 3 variations each
+    ...generateArcs(30, 3)   // New 14 orders with 2 variations each
   ].map((arc, index) => ({
     ...arc,
     order: index < 42 ? Math.ceil((index + 1) / 3) : Math.ceil((index - 42 + 1) / 2) + 14,

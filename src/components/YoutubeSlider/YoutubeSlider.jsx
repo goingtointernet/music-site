@@ -40,27 +40,27 @@ export default function YoutubeSlider() {
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
       title: "Coming soon",
-      thumbnail: "/images/m2.jpg",
+      thumbnail: "/images/empty.jpg",
     },
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
       title: "Coming soon",
-      thumbnail: "/images/m2.jpg",
+      thumbnail: "/images/empty.jpg",
     },
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
       title: "Coming soon",
-      thumbnail: "/images/m2.jpg",
+      thumbnail: "/images/empty.jpg",
     },
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
       title: "Coming soon",
-      thumbnail: "/images/m2.jpg",
+      thumbnail: "/images/empty.jpg",
     },
     {
       id: "6EEW-9NDM5k", // Example YouTube ID
       title: "Coming soon",
-      thumbnail: "/images/m2.jpg",
+      thumbnail: "/images/empty.jpg",
     },
   ]
 
