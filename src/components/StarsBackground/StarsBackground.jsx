@@ -27,7 +27,7 @@ export const StarsBackground = ({
       return {
         x: Math.random() * width,
         y: Math.random() * height,
-        radius: Math.random() * 0.05 + 0.5,
+        radius: Math.random() * 0.05 + 0.7,
         opacity: Math.random() * 0.5 + 0.5,
         twinkleSpeed: shouldTwinkle
           ? minTwinkleSpeed +
