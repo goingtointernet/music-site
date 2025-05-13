@@ -189,7 +189,8 @@ export default function StoreItems() {
                         <Image
                           src={getCardImage() || "/placeholder.svg"}
                           alt={item.name}
-                          fill
+                          width={500}
+                          height={500}
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
@@ -261,8 +262,9 @@ export default function StoreItems() {
                   <Image
                     src={selectedItem.colors ? getCurrentImage(selectedItem) : selectedItem.image || "/placeholder.svg"}
                     alt={selectedItem.name}
-                    fill
-                    className="object-cover"
+                    width={500}
+                    height={500}
+                    className="object-cover h-full"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
                 </div>

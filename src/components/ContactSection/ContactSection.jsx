@@ -1,5 +1,5 @@
 "use client"
-import { useState, useRef, useEffect } from "react"
+import { useState } from "react"
 import { Button } from "../ui/custom-button"
 import { Input } from "../ui/custom-input"
 import { Textarea } from "../ui/custom-textarea"
@@ -34,26 +34,6 @@ export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState("")
-  const sectionRef = useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-in")
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -102,8 +82,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      ref={sectionRef}
-      className="py-24 px-4 relative overflow-hidden opacity-0 transform translate-y-10 transition-all duration-1000 z-[20]"
+      className="py-24 px-4 relative overflow-hidden transform translate-y-10 transition-all z-[20]"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-black opacity-50 z-0"></div>
 
@@ -224,7 +203,7 @@ export default function ContactSection() {
                   href="mailto:booking@artistname.com"
                   className="text-xl font-bold hover:underline bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400"
                 >
-                  forallus@gmail.com
+                  liltizzymgt@gmail.com
                 </a>
               </div>
             </div>

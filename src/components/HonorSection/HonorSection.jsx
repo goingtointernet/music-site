@@ -1,34 +1,9 @@
-"use client"
-
-import { useRef, useEffect } from "react"
-
 export default function HonorSection() {
-  const sectionRef = useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-in")
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
-
+  
   return (
     <section
       id="honor"
-      ref={sectionRef}
-      className="py-24 px-4 relative overflow-hidden opacity-0 transform translate-y-10 transition-all duration-1000 z-[20]"
+      className="py-24 px-4 relative overflow-hidden transform translate-y-10 transition-all z-[20]"
     >
     
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-900 via-black to-zinc-900 opacity-40 z-0"></div>

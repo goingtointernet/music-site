@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 
 const World = dynamic(() => import("../Globe/globe").then((m) => m.World), {
@@ -163,19 +162,6 @@ export function TouringSection() {
       <div className="absolute bottom-1/4 left-0 w-96 h-96 rounded-full bg-gradient-to-r from-white/5 to-transparent blur-3xl"></div>
       <div
         className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[45rem] px-4">
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          className="div flex flex-col">
           <h2 className="text-[2.2rem] text-center md:text-[4rem] mx-auto font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             Touring the World
           </h2>
@@ -183,10 +169,9 @@ export function TouringSection() {
             className="text-center text-base md:text-lg font-normal text-paragraphColor max-w-[700px] mt-2 mx-auto">
             One Artist. Endless Destinations. Bringing sound to streets, stages, and souls worldwide. Every stop is a moment, every show a connection.
           </p>
-        </motion.div>
         <div
           className="absolute w-full bottom-0 inset-x-0 h-40 pointer-events-none select-none  z-40" />
-        <div className="absolute w-full -bottom-[125px] md:-bottom-40 h-[350px] md:h-full z-10 ml-[-20px] pb-[105px] md:pb-[130px]">
+        <div className="absolute w-full -bottom-[125px] md:-bottom-40  h-[350px] md:h-full z-10 ml-[-20px] pb-[105px] md:pb-[130px]">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>

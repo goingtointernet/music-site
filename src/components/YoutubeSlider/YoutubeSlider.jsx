@@ -9,6 +9,7 @@ import { Navigation, Autoplay } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/navigation"
 import { Spotlight } from "../ui/spotlight"
+import Image from "next/image"
 
 export default function YoutubeSlider() {
   const sectionRef = useRef(null)
@@ -197,7 +198,7 @@ export default function YoutubeSlider() {
                         <div className="relative  mt-[10px]">
                           <div className="absolute -inset-10 bg-white/10 rounded-full blur-xl animate-pulse"></div>
                           <div className="relative bg-white/20 backdrop-blur-md border border-white/50 rounded-full p-3 transform transition-transform duration-300 group-hover:scale-110">
-                            <img src={'/images/cd.png'} alt="cd" className="w-[50px] h-[50px] object-contain object-center spin" />
+                            <Image width={100} height={100} src={'/images/cd.png'} alt="cd" className="w-[50px] h-[50px] object-contain object-center spin" />
                           </div>
                         </div>
                       </div>
